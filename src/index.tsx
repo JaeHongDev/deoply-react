@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from "./component/App";
 
-const App = () =>{
-    return <div>1</div>
-}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
