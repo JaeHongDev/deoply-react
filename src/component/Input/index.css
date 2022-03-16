@@ -1,46 +1,62 @@
 * {
-    margin:0;
-    padding:0;
-    outline:none;
+    margin: 0;
+    padding: 0;
+    outline: none;
     box-sizing: border-box;
 }
-.container {
-}
-.wrapper{
-    padding:14px 0px 2px 8px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0);
+
+.wrapper {
+    padding: 14px 0px 2px 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
     border: 1px solid #DBDBDB;
     max-width: 450px;
 }
+
 .wrapper .input-data {
     position: relative;
-}
-.wrapper .input-data input{
-    height:100%;
     width:100%;
-    border:none;
-    font-size :12px
 }
-.wrapper, .input-data input{
+
+.wrapper .input-data div input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 15px
+}
+
+.wrapper, .input-data div input {
     background-color: #fafafa;
 }
-.input-data input:focus ~label,
-.input-data input:valid ~label{
-    transform: translateY(-10px);
-    font-size:8px;
-    color:#4158d0;
+
+.caseUp {
+    transform: translateY(-12px);
+    font-size: 8px;
+    color: #4158d0;
+}
+
+.input-data div input:focus ~ label {
+    background-color: black;
 }
 
 .input-data input:focus .wrapper,
-.input-data input:valid .wrapper{
-    border:1px solid #DBDBDB;
+.input-data input:valid .wrapper {
+    border: 1px solid #DBDBDB;
 }
 
-
-.wrapper .input-data label{
-    font-size:12px;
-    position:absolute;
-    left:0;
-    color:grey;
+.wrapper .input-data label {
+    font-size: 8px;
+    position: absolute;
+    left: 0;
+    color: grey;
     transition: all 0.3s ease;;
+}
+
+.input-wrap {
+    display: flex;
+}
+
+.input-wrap span {
+    font-size: 6px;
+    max-width: 25%;
+    width:20%;
 }
