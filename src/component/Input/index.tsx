@@ -1,20 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import Input from "./index";
-
-const InputContainer = styled("div")`
-  height:36px;
-  display:flex;
-  
-`;
-
-const SpanWrap = styled('span')`
-  transform: scale(.83333) translateY(-10px);
-`;
-
-const InputWrap = styled('input')`
-`;
-
+import "./index.css";
 
 
 export interface IBasicInput {
@@ -25,12 +10,14 @@ export interface IBasicInput {
 
 const BasicInput = ({text, placeholder, changeText}: IBasicInput) => {
     return (
-        <InputContainer>
-            <label>
-                <SpanWrap>{placeholder}</SpanWrap>
-                <InputWrap value={text}  onChange={changeText}/>
-            </label>
-        </InputContainer>
+        <div className="container">
+            <div className="wrapper">
+                <div className="input-data">
+                    <input type="text" required onChange={changeText} value={text}/>
+                    <label>{placeholder}</label>
+                </div>
+            </div>
+        </div>
     );
 }
 
